@@ -1,10 +1,12 @@
 version: '3.8'
 services:
-  react-app:
-    image: react-app:latest
-    build:
-      context: .
-      dockerfile: Dockerfile
+  dev:
+    image: barathkumar1207/dev:latest
     ports:
       - "80:80"
+    restart: always
+  prod:
+    image: barathkumar1207/prod:latest
+    ports:
+      - "8080:80"
     restart: always
